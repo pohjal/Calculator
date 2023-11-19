@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+footer,
+header {
+  background-color: rgb(14, 12, 12);
+  width: 100%;
+  height: 10vh;
+}
+
+.flex-container {
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+}
+.flex-item {
+  display: flex;
+  flex: 1;
+  border: 1px solid black;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculatorCont {
+  display: flex;
+  height: 55%;
+  width: 55%;
+  flex-direction: column;
+  background-color: rgb(70, 19, 19);
+  justify-content: center;
+  align-items: center;
+  border-radius: 5%;
+}
+p {
+  padding-right: 5px;
+}
+
+.inputDisplay {
+  display: flex;
+  background-color: white;
+  width: 90%;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid black;
+  margin-top: 5%;
+  align-items: center;
+  justify-content: right;
+}
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Adjusted for 4 columns */
+  grid-template-rows: repeat(5, 1fr); /* Adjusted for 5 rows */
+  gap: 1px;
+  flex: 1; /* Added to fill both horizontal and vertical space */
+  width: 90%;
+  margin-bottom: 5%;
+}
+
+.button-container button {
+  flex: 1;
+  font-size: 18px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  height: 100%; /* Updated to percentage */
+  width: 100%;
+}
+.button-container button:hover {
+  background-color: #e0e0e0;
+}
+
+#animated-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+#animated-background video {
+  width: 100%; /* Set width to 100% of the container */
+  height: 100%; /* Set height to 100% of the container */
+  object-fit: cover; /* Adjust to your preference (e.g., cover, contain) */
+  display: block;
+}
